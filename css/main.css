@@ -1,0 +1,89 @@
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  #navbar li:not(:first-child) {display: none;}
+  #navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  #navbar.responsive {position: relative;}
+  #navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+ul:not(#navbar) li {
+	margin: 10px;
+}
+
+#navbar > li#home a {
+	font-size: 24px;
+	padding: 35px 70px;
+}
+
+#navbar > li a:hover {
+	background-color: #34495e;
+}
+
+#navbar > li a.active {
+	background-color: #34495e;
+}
+
+#navbar > li a {
+	display: block;
+    color: white;
+    padding: 40px 50px;
+    text-decoration: none;
+}
+
+#navbar > li {
+	float: left;
+}
+
+#navbar {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0px;
+	height: 100px;
+	width: 100%;
+	color: white;
+	background-color: #2c3e50;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.body > ul {
+	list-style-type:square;
+}
+
+.body h1, h2, h3 {
+	text-align: center;
+}
+
+.body {
+	width: 70vw;
+	margin: 5em auto;
+	padding: 50px;
+	background-color: #fff;
+	border-radius: 1em;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	top: 100px;
+	background-color: #f0f0f2;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
